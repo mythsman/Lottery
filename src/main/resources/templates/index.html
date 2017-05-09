@@ -1,0 +1,116 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Mythsgram</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/jquery.form.min.js"></script>
+    <link href="css/index.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="page-header">
+    <h1>幸运生肖</h1>
+
+</div>
+<div class="container">
+
+    <div class="col-md-2">
+        <div class="panel panel-default left">
+            <div class="panel-body">
+                <h3>昨日开奖</h3>
+                <p class="pre-scrollable">20170509001期:<br/>鼠牛虎兔龙<br/>20170509001期:<br/>鼠牛虎兔龙<br/>20170509001期:<br/>鼠牛虎兔龙<br/>20170509001期:<br/>鼠牛虎兔龙<br/></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8">
+        <h4>
+            <small id="current-time">时间</small>
+        </h4>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div>
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" >
+                            <a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab">帮助说明</a>
+                        </li>
+                        <li role="presentation" class="active">
+                            <a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab">开奖情况</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab">历史情况</a>
+                        </li>
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane fade " id="tab1">
+                            
+                            
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade in active" id="tab2">
+                            <div class="row">
+                                <div class="col-md-1">
+
+                                </div>
+                                <div class="col-md-2">
+                                    <img class="img-responsive " src="img/150x150_pig.png"/>
+                                </div>
+                                <div class="col-md-2">
+                                    <img class="img-responsive " src="img/150x150_mouse.png"/>
+                                </div>
+                                <div class="col-md-2">
+                                    <img class="img-responsive " src="img/150x150_horse.png"/>
+                                </div>
+                                <div class="col-md-2">
+                                    <img class="img-responsive " src="img/150x150_monkey.png"/>
+                                </div>
+                                <div class="col-md-2">
+                                    <img class="img-responsive " src="img/150x150_sheep.png"/>
+                                </div>
+                                <div class="col-md-1">
+
+                                </div>
+
+                            </div>
+                            
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="tab3">
+                            
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="panel panel-default right">
+            <div class="panel-body">
+                <h3>今日开奖</h3>
+                <p class="pre-scrollable">20170509001期:<br/>鼠牛虎兔龙<br/>20170509001期:<br/>鼠牛虎兔龙<br/>20170509001期:<br/>鼠牛虎兔龙<br/>20170509001期:<br/>鼠牛虎兔龙</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+</body>
+<script>
+    $(document).ready(function () {
+        function updateTime() {
+            var date = (new Date());
+            var time = "当前时间：" + date.getFullYear() + "年" + (date.getMonth()+1) + "月" + date.getDate() + "日  " + date.getHours() + "时" + date.getMinutes() + "分" + date.getSeconds() + "秒";
+            $('#current-time').text(time);
+        }
+        updateTime();
+        setInterval(updateTime, 1000);
+    });
+</script>
+</html>

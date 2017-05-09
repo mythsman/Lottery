@@ -1,0 +1,31 @@
+h1{
+    text-align:center;
+}
+h4{
+    text-align: right;
+}
+h3{
+    margin-top:40px;
+    text-align: center;
+}
+.pre-scrollable{
+    margin-top:50px;
+    max-height:400px;
+    height:400px;
+}
+
+.left{
+    margin-top:32px;
+    margin-left:-50px;
+}
+.right{
+    margin-top:32px;
+    margin-right:-50px;
+}
+.col-md-4{
+    height:400px;
+    background-image: url('../img/animal.jpg');
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-position: 20% 20%;
+}
