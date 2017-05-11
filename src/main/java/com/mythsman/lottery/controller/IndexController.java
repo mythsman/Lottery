@@ -7,7 +7,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 
 /**
@@ -27,7 +29,18 @@ public class IndexController {
         model.addAttribute("time", time);
         model.addAttribute("nextTime", sharedComponent.getNextTime());
         model.addAttribute("period", sharedComponent.getLastRecord().getPeriod());
-        model.addAttribute("results",sharedComponent.getLastResultList());
+
+        List<Character> list=new ArrayList<>();
+        String result=sharedComponent.getLastRecord().getResult();
+        for(int i=0;i<result.length();i++){
+            list.add(result.charAt(i));
+        }
+        model.addAttribute("results",list);
+        model.addAttribute("today",sharedComponent.getTodayRecords());
+        model.addAttribute("yesterday",sharedComponent.getYesterdayRecords());
+        model.addAttribute("maxContinue","");
+        model.addAttribute("maxLoss","");
+        model.addAttribute("currentLoss","");
         return "index";
     }
 }

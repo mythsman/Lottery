@@ -1,7 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Mythsgram</title>
+    <title>幸运生肖</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -9,7 +9,6 @@
     <link href="css/bootstrap.min.css" rel="stylesheet"/>
     <script src="js/jquery.min.js" type="text/javascript"></script>
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="js/jquery.form.min.js"></script>
     <link href="css/index.css" rel="stylesheet"/>
 </head>
 <body>
@@ -65,9 +64,9 @@
                                         <ul class="list-group">
 
                                             <li class="list-group-item">
-                                                <div class="row">
-                                                    <div class="left col-md-6 col-xs-6">第３第三方期</div>
-                                                    <div class="right col-md-6 col-xs-6">鼠牛虎兔龙射</div>
+                                                <div th:each="item:${today}" class="row">
+                                                    <div class="left col-md-6 col-xs-6">第<span th:text="${item.period}"></span>期</div>
+                                                    <div class="right col-md-6 col-xs-6"><span th:text="${item.result}"></span></div>
                                                 </div>
                                             </li>
                                         </ul>
@@ -79,13 +78,83 @@
                                         <h3 class="panel-title">昨日开奖</h3>
                                     </div>
                                     <div class="panel-body">
-
+                                        <ul class="list-group">
+                                            <li class="list-group-item">
+                                                <div th:each="item:${yesterday}" class="row">
+                                                    <div class="left col-md-6 col-xs-6">第<span th:text="${item.period}"></span>期</div>
+                                                    <div class="right col-md-6 col-xs-6"><span th:text="${item.result}"></span></div>
+                                                </div>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div role="tabpanel" class="tab-pane fade" id="tab3">
-
+                            <table class="table table-hover table-bordered table-condensed">
+                                <tbody>
+                                    <tr>
+                                        <td>#</td>
+                                        <td>鼠</td>
+                                        <td>牛</td>
+                                        <td>虎</td>
+                                        <td>兔</td>
+                                        <td>龙</td>
+                                        <td>蛇</td>
+                                        <td>马</td>
+                                        <td>羊</td>
+                                        <td>猴</td>
+                                        <td>鸡</td>
+                                        <td>狗</td>
+                                        <td>猪</td>
+                                    </tr>
+                                    <tr>
+                                        <td>最大连出</td>
+                                        <td>鼠</td>
+                                        <td>牛</td>
+                                        <td>虎</td>
+                                        <td>兔</td>
+                                        <td>龙</td>
+                                        <td>蛇</td>
+                                        <td>马</td>
+                                        <td>羊</td>
+                                        <td>猴</td>
+                                        <td>鸡</td>
+                                        <td>狗</td>
+                                        <td>猪</td>
+                                    </tr>
+                                    <tr>
+                                        <td>最大遗漏</td>
+                                        <td>鼠</td>
+                                        <td>牛</td>
+                                        <td>虎</td>
+                                        <td>兔</td>
+                                        <td>龙</td>
+                                        <td>蛇</td>
+                                        <td>马</td>
+                                        <td>羊</td>
+                                        <td>猴</td>
+                                        <td>鸡</td>
+                                        <td>狗</td>
+                                        <td>猪</td>
+                                    </tr>
+                                    <tr>
+                                        <td>当前遗漏</td>
+                                        <td>鼠</td>
+                                        <td>牛</td>
+                                        <td>虎</td>
+                                        <td>兔</td>
+                                        <td>龙</td>
+                                        <td>蛇</td>
+                                        <td>马</td>
+                                        <td>羊</td>
+                                        <td>猴</td>
+                                        <td>鸡</td>
+                                        <td>狗</td>
+                                        <td>猪</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
 

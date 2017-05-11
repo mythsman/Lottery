@@ -1,0 +1,19 @@
+.left{
+    text-align:left;
+}
+.right{
+    text-align:right;
+}
+.center{
+    text-align:center;
+}
+.container{
+    max-width:500px;
+}
+.row{
+    font-size:20px;
+}
+h3{
+    margin-top:auto;
+    margin-bottom:auto;
+}

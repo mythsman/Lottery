@@ -1,0 +1,128 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>幸运生肖</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <link href="css/background.css" rel="stylesheet"/>
+
+</head>
+<body>
+<div class="page-header">
+    <h1 class="center">后台管理</h1>
+</div>
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <form class="form-horizontal" method="GET" action="background">
+                <div class="row">
+                    <div class="col-md-6 col-xs-6">
+                        <span class="form-control">鼠</span>
+                    </div>
+                    <div class="col-md-6 col-xs-6">
+                        <input name="0" class="btn btn-primary center form-control" type="button" value="0"/>
+                    </div>
+                    <div class="col-md-6 col-xs-6">
+                        <span class="form-control">牛</span>
+                    </div>
+                    <div class="col-md-6 col-xs-6">
+                        <input name="1" class="btn btn-primary center form-control" type="button" value="0"/>
+                    </div>
+                    <div class="col-md-6 col-xs-6">
+                        <span class="form-control">虎</span>
+                    </div>
+                    <div class="col-md-6 col-xs-6">
+                        <input name="2" class="btn btn-primary center form-control" type="button" value="0"/>
+                    </div>
+                    <div class="col-md-6 col-xs-6">
+                        <span class="form-control">兔</span>
+                    </div>
+                    <div class="col-md-6 col-xs-6">
+                        <input name="3" class="btn btn-primary center form-control" type="button" value="0"/>
+                    </div>
+                    <div class="col-md-6 col-xs-6">
+                        <span class="form-control">龙</span>
+                    </div>
+                    <div class="col-md-6 col-xs-6">
+                        <input name="4" class="btn btn-primary center form-control" type="button" value="0"/>
+                    </div>
+                    <div class="col-md-6 col-xs-6">
+                        <span class="form-control">蛇</span>
+                    </div>
+                    <div class="col-md-6 col-xs-6">
+                        <input name="5" class="btn btn-primary center form-control" type="button" value="0"/>
+                    </div>
+                    <div class="col-md-6 col-xs-6">
+                        <span class="form-control">马</span>
+                    </div>
+                    <div class="col-md-6 col-xs-6">
+                        <input name="6" class="btn btn-primary center form-control" type="button" value="0"/>
+                    </div>
+                    <div class="col-md-6 col-xs-6">
+                        <span class="form-control">羊</span>
+                    </div>
+                    <div class="col-md-6 col-xs-6">
+                        <input name="7" class="btn btn-primary center form-control" type="button" value="0"/>
+                    </div>
+                    <div class="col-md-6 col-xs-6">
+                        <span class="form-control">猴</span>
+                    </div>
+                    <div class="col-md-6 col-xs-6">
+                        <input name="8" class="btn btn-primary center form-control" type="button" value="0"/>
+                    </div>
+                    <div class="col-md-6 col-xs-6">
+                        <span class="form-control">鸡</span>
+                    </div>
+                    <div class="col-md-6 col-xs-6">
+                        <input name="9" class="btn btn-primary center form-control" type="button" value="0"/>
+                    </div>
+                    <div class="col-md-6 col-xs-6">
+                        <span class="form-control">狗</span>
+                    </div>
+                    <div class="col-md-6 col-xs-6">
+                        <input name="10" class="btn btn-primary center form-control" type="button" value="0"/>
+                    </div>
+                    <div class="col-md-6 col-xs-6">
+                        <span class="form-control">猪</span>
+                    </div>
+                    <div class="col-md-6 col-xs-6">
+                        <input name="11" class="btn btn-primary center form-control" type="button" value="0"/>
+                    </div>
+                </div>
+                <input id="submit" class="form-control btn btn-danger" type="submit" disabled="disabled" value="提交"/>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    $(document).ready(function () {
+        var count = 0;
+        $(".btn-primary").click(function () {
+            if ($(this).val() == "0") {
+                $(this).val("1");
+                count++;
+            } else if ($(this).val() == "1") {
+                $(this).val("2");
+                count++;
+            } else if ($(this).val() == "2") {
+                $(this).val("3");
+                count++;
+            } else {
+                $(this).val("0");
+                count -= 3;
+            }
+            if (count == 6) {
+                $("#submit").attr("disabled", false);
+            } else {
+                $("#submit").attr("disabled", true);
+            }
+        });
+    });
+</script>
+</html>

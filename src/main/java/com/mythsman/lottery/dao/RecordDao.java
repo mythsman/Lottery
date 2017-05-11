@@ -22,6 +22,10 @@ public interface RecordDao {
     @Select({"select * from `record` where period=#{period}"})
     Record select(@Param("period") String period);
 
-    @Select({"select * from `record` where period like #{like}"})
-    List<Record> selectByLike(@Param("like") String like);
+    @Select({"select * from `record` where period like #{like} and period <=#{now} order by period desc"})
+    List<Record> selectByLike(@Param("like") String like,@Param("now") String now);
+
+    @Select({"select * from `record` where period <= #{period} order by period desc limit 50"})
+    List<Record> selectLast50(@Param("period")String period);
+
 }

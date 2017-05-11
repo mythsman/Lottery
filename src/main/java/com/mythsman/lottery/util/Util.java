@@ -62,45 +62,40 @@ public class Util {
         }
     }
 
-    private static String getName(String s){
-        switch(s){
-            case "00":
+    public static String getName(int t){
+        switch(t){
+            case 0:
                 return "鼠";
-            case "01":
+            case 1:
                 return "牛";
-            case "02":
+            case 2:
                 return "虎";
-            case "03":
+            case 3:
                 return "兔";
-            case "04":
+            case 4:
                 return "龙";
-            case "05":
+            case 5:
                 return "蛇";
-            case "06":
+            case 6:
                 return "马";
-            case "07":
+            case 7:
                 return "羊";
-            case "08":
+            case 8:
                 return "猴";
-            case "09":
+            case 9:
                 return "鸡";
-            case "10":
+            case 10:
                 return "狗";
-            case "11":
+            case 11:
                 return "猪";
             default:
                 return "错误";
         }
     }
 
-    public static List<String> parseResult(String result){
-        List<String> list=new ArrayList<>();
-        for(int i=0;i<6;i++){
-            String curr=result.substring(i*2,i*2+2);
-            list.add(getName(curr));
-        }
-        return list;
-    }
 
+    public static String getYesterDayPeriod(Date date){
+        return new SimpleDateFormat("yyMMdd").format(new Date(date.getTime()-1000L*60L*60L*24));
+    }
 
 }
