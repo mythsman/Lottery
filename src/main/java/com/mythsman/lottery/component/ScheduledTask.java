@@ -4,7 +4,6 @@ import com.mythsman.lottery.dao.RecordDao;
 import com.mythsman.lottery.model.Record;
 import com.mythsman.lottery.model.StatisticItem;
 import com.mythsman.lottery.util.Util;
-import jdk.internal.dynalink.beans.StaticClass;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;

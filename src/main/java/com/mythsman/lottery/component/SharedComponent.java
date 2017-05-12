@@ -2,12 +2,9 @@ package com.mythsman.lottery.component;
 
 import com.mythsman.lottery.model.Record;
 import com.mythsman.lottery.model.StatisticItem;
-import com.mythsman.lottery.util.Util;
-import com.sun.org.glassfish.external.statistics.Statistic;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
-import java.util.Map;
 
 /**
  * Created by myths on 5/11/17.

@@ -1,7 +1,5 @@
 package com.mythsman.lottery.util;
 
-import com.mythsman.lottery.model.Record;
-
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
