@@ -16,7 +16,7 @@ public interface RecordDao {
     @Insert({"insert into `record` (period,result) values(#{period},#{result} )"})
     void insert(@Param("period") String period, @Param("result") String result);
 
-    @Update({"update `record` set result = #{result} where period=#{period} )"})
+    @Update({"update `record` set result = #{result} where period=#{period} "})
     void update(@Param("period") String period, @Param("result") String result);
 
     @Select({"select * from `record` where period=#{period}"})

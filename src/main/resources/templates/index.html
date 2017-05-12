@@ -92,66 +92,22 @@
                         </div>
                         <div role="tabpanel" class="tab-pane fade" id="tab3">
                             <table class="table table-hover table-bordered table-condensed">
-                                <tbody>
+                                <thead>
                                     <tr>
                                         <td>#</td>
-                                        <td>鼠</td>
-                                        <td>牛</td>
-                                        <td>虎</td>
-                                        <td>兔</td>
-                                        <td>龙</td>
-                                        <td>蛇</td>
-                                        <td>马</td>
-                                        <td>羊</td>
-                                        <td>猴</td>
-                                        <td>鸡</td>
-                                        <td>狗</td>
-                                        <td>猪</td>
-                                    </tr>
-                                    <tr>
+                                        <td>总次数</td>
                                         <td>最大连出</td>
-                                        <td>鼠</td>
-                                        <td>牛</td>
-                                        <td>虎</td>
-                                        <td>兔</td>
-                                        <td>龙</td>
-                                        <td>蛇</td>
-                                        <td>马</td>
-                                        <td>羊</td>
-                                        <td>猴</td>
-                                        <td>鸡</td>
-                                        <td>狗</td>
-                                        <td>猪</td>
-                                    </tr>
-                                    <tr>
                                         <td>最大遗漏</td>
-                                        <td>鼠</td>
-                                        <td>牛</td>
-                                        <td>虎</td>
-                                        <td>兔</td>
-                                        <td>龙</td>
-                                        <td>蛇</td>
-                                        <td>马</td>
-                                        <td>羊</td>
-                                        <td>猴</td>
-                                        <td>鸡</td>
-                                        <td>狗</td>
-                                        <td>猪</td>
-                                    </tr>
-                                    <tr>
                                         <td>当前遗漏</td>
-                                        <td>鼠</td>
-                                        <td>牛</td>
-                                        <td>虎</td>
-                                        <td>兔</td>
-                                        <td>龙</td>
-                                        <td>蛇</td>
-                                        <td>马</td>
-                                        <td>羊</td>
-                                        <td>猴</td>
-                                        <td>鸡</td>
-                                        <td>狗</td>
-                                        <td>猪</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr th:each="item : ${statistics}">
+                                        <td th:text="${item.name}">鼠</td>
+                                        <td th:text="${item.total}"></td>
+                                        <td th:text="${item.maxContinue}"></td>
+                                        <td th:text="${item.maxLoss}"></td>
+                                        <td th:text="${item.currentLoss}"></td>
                                     </tr>
                                 </tbody>
                             </table>

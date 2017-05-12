@@ -1,6 +1,7 @@
 package com.mythsman.lottery.controller;
 
 import com.mythsman.lottery.component.SharedComponent;
+import com.mythsman.lottery.model.StatisticItem;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -38,9 +39,8 @@ public class IndexController {
         model.addAttribute("results",list);
         model.addAttribute("today",sharedComponent.getTodayRecords());
         model.addAttribute("yesterday",sharedComponent.getYesterdayRecords());
-        model.addAttribute("maxContinue","");
-        model.addAttribute("maxLoss","");
-        model.addAttribute("currentLoss","");
+        model.addAttribute("statistics",sharedComponent.getStatistics());
+
         return "index";
     }
 }

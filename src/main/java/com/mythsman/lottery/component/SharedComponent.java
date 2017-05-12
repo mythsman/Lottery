@@ -1,7 +1,9 @@
 package com.mythsman.lottery.component;
 
 import com.mythsman.lottery.model.Record;
+import com.mythsman.lottery.model.StatisticItem;
 import com.mythsman.lottery.util.Util;
+import com.sun.org.glassfish.external.statistics.Statistic;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -16,7 +18,7 @@ public class SharedComponent {
     private Record lastRecord;//上一次开奖的记录
     private List<Record> todayRecords;//今天所有的开奖记录
     private List<Record> yesterdayRecords;//昨天所有的开奖记录
-    private Map<String, List<Integer>> statistics;//统计结果
+    private List<StatisticItem> statistics;//统计结果
 
     public Long getNextTime() {
         return nextTime;
@@ -54,11 +56,11 @@ public class SharedComponent {
         this.todayRecords = todayRecords;
     }
 
-    public Map<String, List<Integer>> getStatistics() {
+    public List<StatisticItem> getStatistics() {
         return statistics;
     }
 
-    public void setStatistics(Map<String, List<Integer>> statistics) {
+    public void setStatistics(List<StatisticItem> statistics) {
         this.statistics = statistics;
     }
 }

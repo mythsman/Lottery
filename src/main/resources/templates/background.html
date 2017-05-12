@@ -9,6 +9,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet"/>
     <script src="js/jquery.min.js" type="text/javascript"></script>
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/jquery.form.min.js" type="text/javascript"></script>
     <link href="css/background.css" rel="stylesheet"/>
 
 </head>
@@ -19,79 +20,91 @@
 <div class="container">
     <div class="panel panel-default">
         <div class="panel-body">
-            <form class="form-horizontal" method="GET" action="background">
+            <form id="form" class="form-horizontal" method="POST" action="background">
                 <div class="row">
                     <div class="col-md-6 col-xs-6">
                         <span class="form-control">鼠</span>
                     </div>
                     <div class="col-md-6 col-xs-6">
-                        <input name="0" class="btn btn-primary center form-control" type="button" value="0"/>
+                        <input name="0" type="hidden" value="0"/>
+                        <input class="btn btn-primary center form-control" type="button" value="0"/>
                     </div>
                     <div class="col-md-6 col-xs-6">
                         <span class="form-control">牛</span>
                     </div>
                     <div class="col-md-6 col-xs-6">
-                        <input name="1" class="btn btn-primary center form-control" type="button" value="0"/>
+                        <input name="1" type="hidden" value="0"/>
+                        <input class="btn btn-primary center form-control" type="button" value="0"/>
                     </div>
                     <div class="col-md-6 col-xs-6">
                         <span class="form-control">虎</span>
                     </div>
                     <div class="col-md-6 col-xs-6">
-                        <input name="2" class="btn btn-primary center form-control" type="button" value="0"/>
+                        <input name="2" type="hidden" value="0"/>
+                        <input class="btn btn-primary center form-control" type="button" value="0"/>
                     </div>
                     <div class="col-md-6 col-xs-6">
                         <span class="form-control">兔</span>
                     </div>
                     <div class="col-md-6 col-xs-6">
-                        <input name="3" class="btn btn-primary center form-control" type="button" value="0"/>
+                        <input name="3" type="hidden" value="0"/>
+                        <input class="btn btn-primary center form-control" type="button" value="0"/>
                     </div>
                     <div class="col-md-6 col-xs-6">
                         <span class="form-control">龙</span>
                     </div>
                     <div class="col-md-6 col-xs-6">
-                        <input name="4" class="btn btn-primary center form-control" type="button" value="0"/>
+                        <input name="4" type="hidden" value="0"/>
+                        <input class="btn btn-primary center form-control" type="button" value="0"/>
                     </div>
                     <div class="col-md-6 col-xs-6">
                         <span class="form-control">蛇</span>
                     </div>
                     <div class="col-md-6 col-xs-6">
-                        <input name="5" class="btn btn-primary center form-control" type="button" value="0"/>
+                        <input name="5" type="hidden" value="0"/>
+                        <input class="btn btn-primary center form-control" type="button" value="0"/>
                     </div>
                     <div class="col-md-6 col-xs-6">
                         <span class="form-control">马</span>
                     </div>
                     <div class="col-md-6 col-xs-6">
-                        <input name="6" class="btn btn-primary center form-control" type="button" value="0"/>
+                        <input name="6" type="hidden" value="0"/>
+                        <input class="btn btn-primary center form-control" type="button" value="0"/>
                     </div>
                     <div class="col-md-6 col-xs-6">
                         <span class="form-control">羊</span>
                     </div>
                     <div class="col-md-6 col-xs-6">
-                        <input name="7" class="btn btn-primary center form-control" type="button" value="0"/>
+                        <input name="7" type="hidden" value="0"/>
+                        <input class="btn btn-primary center form-control" type="button" value="0"/>
                     </div>
                     <div class="col-md-6 col-xs-6">
                         <span class="form-control">猴</span>
                     </div>
                     <div class="col-md-6 col-xs-6">
-                        <input name="8" class="btn btn-primary center form-control" type="button" value="0"/>
+                        <input name="8" type="hidden" value="0"/>
+                        <input class="btn btn-primary center form-control" type="button" value="0"/>
                     </div>
                     <div class="col-md-6 col-xs-6">
                         <span class="form-control">鸡</span>
                     </div>
                     <div class="col-md-6 col-xs-6">
-                        <input name="9" class="btn btn-primary center form-control" type="button" value="0"/>
+                        <input name="9" type="hidden" value="0"/>
+                        <input class="btn btn-primary center form-control" type="button" value="0"/>
                     </div>
                     <div class="col-md-6 col-xs-6">
                         <span class="form-control">狗</span>
                     </div>
                     <div class="col-md-6 col-xs-6">
-                        <input name="10" class="btn btn-primary center form-control" type="button" value="0"/>
+                        <input name="10" type="hidden" value="0"/>
+                        <input class="btn btn-primary center form-control" type="button" value="0"/>
                     </div>
                     <div class="col-md-6 col-xs-6">
                         <span class="form-control">猪</span>
                     </div>
                     <div class="col-md-6 col-xs-6">
-                        <input name="11" class="btn btn-primary center form-control" type="button" value="0"/>
+                        <input name="11" type="hidden" value="0"/>
+                        <input class="btn btn-primary center form-control" type="button" value="0"/>
                     </div>
                 </div>
                 <input id="submit" class="form-control btn btn-danger" type="submit" disabled="disabled" value="提交"/>
@@ -99,28 +112,58 @@
         </div>
     </div>
 </div>
+<div id="modal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                修改结果：
+            </div>
+            <div class="modal-body">
+                修改成功！
+            </div>
+            <div class="modal-footer">
+
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 </body>
 <script>
     $(document).ready(function () {
         var count = 0;
         $(".btn-primary").click(function () {
+            var sibling=$(this).siblings('input');
             if ($(this).val() == "0") {
                 $(this).val("1");
+                sibling.val("1");
                 count++;
             } else if ($(this).val() == "1") {
                 $(this).val("2");
+                sibling.val("2");
+
                 count++;
             } else if ($(this).val() == "2") {
                 $(this).val("3");
+                sibling.val("3");
+
                 count++;
             } else {
                 $(this).val("0");
+                sibling.val("0");
+
                 count -= 3;
             }
             if (count == 6) {
                 $("#submit").attr("disabled", false);
             } else {
                 $("#submit").attr("disabled", true);
+            }
+        });
+
+        $("#form").ajaxForm(function(data){
+            if(data=="success"){
+                $('#modal').modal('show');
+                setTimeout('window.location.href="/"',2000);
             }
         });
     });

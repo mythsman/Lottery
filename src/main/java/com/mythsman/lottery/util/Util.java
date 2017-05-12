@@ -47,6 +47,11 @@ public class Util {
         int period=(beforeHour-10)*12+beforeMinute/5+1;
         return year+months+day+String.format("%03d",period);
     }
+    public static String getNextPeriod(Date date){
+        Long nextTime=Util.getNextTime(date)+1000;
+        return Util.getLastPeriod(new Date(nextTime));
+
+    }
 
     public static Long getNextTime(Date date){
         String hour=hourFormat.format(date);
