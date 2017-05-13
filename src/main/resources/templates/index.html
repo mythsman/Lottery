@@ -41,7 +41,10 @@
                     <!-- Tab panes -->
                     <div class="tab-content">
                         <div role="tabpanel" class="tab-pane fade " id="tab1">
+                            <p>
+                                幸运生肖是一种在线即开型娱乐游戏，有12位生肖组汇而成，属于娱乐范畴，可以当做竞猜娱乐游戏进行，每五分钟系统将自动生成六个球开出，每期最多开出六位生肖，全天从上午十点到晚上十一点共开出156期，特此声明，本游戏仅用于娱乐。
 
+                            </p>
                         </div>
                         <div role="tabpanel" class="tab-pane fade in active" id="tab2">
                             <div class="row">
@@ -49,7 +52,7 @@
                             </div>
                             <div class="row">
                                 <div th:each="result:${results}" class="col-md-2 col-xs-2 center">
-                                    <span th:text="${result}">猪</span>
+                                    <img th:src="'img/'+${result}+'.png'" class="img-responsive "/>
                                 </div>
                             </div>
                             <div class="row">
