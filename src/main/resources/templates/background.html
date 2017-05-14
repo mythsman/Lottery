@@ -1,5 +1,4 @@
-<html xmlns="http://www.w3.org/1999/xhtml"
->
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>幸运生肖</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -132,7 +131,7 @@
     $(document).ready(function () {
         var count = 0;
         $(".btn-primary").click(function () {
-            var sibling=$(this).siblings('input');
+            var sibling = $(this).siblings('input');
             if ($(this).val() == "0") {
                 $(this).val("1");
                 sibling.val("1");
@@ -160,10 +159,10 @@
             }
         });
 
-        $("#form").ajaxForm(function(data){
-            if(data=="success"){
+        $("#form").ajaxForm(function (data) {
+            if (data == "success") {
                 $('#modal').modal('show');
-                setTimeout('window.location.href="/"',2000);
+                setTimeout('window.location.href="/"', 2000);
             }
         });
     });
