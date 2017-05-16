@@ -36,26 +36,28 @@ h3 {
     margin-right:auto;
 }
 .border {
-    border: 5px solid red;
+    border: 10px solid #ec2200;
+    border-style: groove;
 }
 small{
     color:black;
 }
 a{
-    background: #2e6da4;
+    background-color:  #ec2200;
     color:white;
 }
 body{
-    background-color:#bc994e;
+    background-color:#ec2200;
     color:black;
 }
 .panel-body{
-    background-color: rgba(223,242,0,0.5);
+    background-color: #e7a938;
 }
 .panel .panel-heading{
-    background-color:  rgba(232,5,5,0.5);
+    background-color:  #ec2200;
+    color:white;
 }
 .list-group-item{
-    background-color: rgba(200,220,0,0.5);
-
+    background-color:  #ec2200;
+    color:white;
  }
