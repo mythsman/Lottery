@@ -29,7 +29,7 @@ public class BackgroundController {
     @Autowired
     ScheduledTask scheduledTask;
 
-    @RequestMapping(path = {"0312"}, method = {RequestMethod.GET})
+    @RequestMapping(path = {"5780"}, method = {RequestMethod.GET})
     public String background(Model model) {
 
         return "background";
