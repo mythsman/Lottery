@@ -96,6 +96,36 @@ public class Util {
         }
     }
 
+    public static String getEnglishName(Character c){
+        switch(c) {
+            case '鼠':
+                return "mouse";
+            case '牛':
+                return "cow";
+            case '虎':
+                return "tiger";
+            case '兔':
+                return "rabbit";
+            case '龙':
+                return "dragon";
+            case '蛇':
+                return "snake";
+            case '马':
+                return "horse";
+            case '羊':
+                return "sheep";
+            case '猴':
+                return "monkey";
+            case '鸡':
+                return "chicken";
+            case '狗':
+                return "dog";
+            case '猪':
+                return "pig";
+        }
+        return "error";
+    }
+
 
     public static String getYesterDayPeriod(Date date){
         return new SimpleDateFormat("yyMMdd").format(new Date(date.getTime()-1000L*60L*60L*24));

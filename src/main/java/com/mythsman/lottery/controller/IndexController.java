@@ -2,6 +2,7 @@ package com.mythsman.lottery.controller;
 
 import com.mythsman.lottery.component.SharedComponent;
 import com.mythsman.lottery.model.StatisticItem;
+import com.mythsman.lottery.util.Util;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -31,10 +32,10 @@ public class IndexController {
         model.addAttribute("nextTime", sharedComponent.getNextTime());
         model.addAttribute("period", sharedComponent.getLastRecord().getPeriod());
 
-        List<Character> list=new ArrayList<>();
+        List<String> list=new ArrayList<>();
         String result=sharedComponent.getLastRecord().getResult();
         for(int i=0;i<result.length();i++){
-            list.add(result.charAt(i));
+            list.add(Util.getEnglishName(result.charAt(i)));
         }
         model.addAttribute("results",list);
         model.addAttribute("today",sharedComponent.getTodayRecords());
